@@ -39,6 +39,7 @@ function compare_feedback (user_guess, chosen_word) {
     }));
     }
 
-    export default { compare_feedback };
+module.exports = { compare_feedback };
+
 
     
