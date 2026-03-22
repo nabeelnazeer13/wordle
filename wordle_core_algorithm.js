@@ -4,7 +4,7 @@
 
 */
 
-function check_respond (user_guess, chosen_word) {
+function compare_feedback (user_guess, chosen_word) {
     const result = [];
     //assume word doesnt match 100%
     //create arrays to store info about characters in each word and their comparison
@@ -39,6 +39,6 @@ function check_respond (user_guess, chosen_word) {
     }));
     }
 
-    export default { feedback };
+    export default { compare_feedback };
 
     
