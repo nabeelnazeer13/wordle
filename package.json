@@ -4,7 +4,12 @@
   "description": "",
   "main": "algo.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
