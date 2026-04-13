@@ -1,5 +1,5 @@
-import app from "./wordle/src/app.js";
-import { connectDB } from "./server_db/db.js";
+const app = require('./app.js');
+const connectDB = require('./db/db.js');
 
 const PORT = 5080;
 async function startServer() {
