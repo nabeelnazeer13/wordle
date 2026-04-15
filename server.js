@@ -1,6 +1,7 @@
 const app = require('./app.js');
 const connectDB = require('./db/db.js');
 const Highscore = require('./db/highscore');
+const words = require('./db/words');
 
 const PORT = 5080;
 async function startServer() {
@@ -19,10 +20,14 @@ async function startServer() {
 
     app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
+        loadWords();
     });
     } catch (error) {
         console.error('Failed to start server:', error);
     }
+
+
+
 }
 startServer();
 

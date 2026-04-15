@@ -1,3 +1,15 @@
-const words = ['apple', 'grape', 'crane', 'brick', 'flame', 'stone', 'plank', 'glare', 'storm', 'black', 'blaze', 'clamp', 'clash', 'climb', 'clown', 'clump', 'clung', 'clunk', 'clove', 'clone', 'close', 'cloth', 'cloud', 'clout', 'clove', 'clown', 'clubhouse'];
+const fs = require('fs');
+const path = require('path');
 
-module.exports = words;
+function loadWords() {
+const words = fs
+  .readFileSync(path.join(__dirname, 'words_alpha.txt'), 'utf-8')
+  .split('\n')
+  .map(w => w.trim().toLowerCase())
+  .filter(w => w.length > 0);
+
+console.log(`Loaded ${words.length} words`);
+return words;
+}
+
+module.exports = { loadWords };
