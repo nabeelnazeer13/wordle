@@ -2,18 +2,15 @@ const express = require('express');
 const { pick_word } = require('./logic/word_picker');
 const Highscore = require('./db/highscore');
 const aboutRoute = require('./routes/about');
+const highscoresRoute = require('./routes/highscores');
 
 const app = express();
 app.use(express.json());
 app.use(aboutRoute);
+app.use(highscoresRoute);
 
 app.get('/', (req, res) => {
   res.send('Server up and running');
-});
-
-
-app.get('/highscores', (req, res) => {
-  res.send('Highscores page OK');
 });
 
 app.get('/api/word', (req, res) => {
