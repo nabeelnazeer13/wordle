@@ -1,7 +1,7 @@
 const app = require('./app.js');
 const connectDB = require('./db/db.js');
 const Highscore = require('./db/highscore');
-const words = require('./db/words');
+const { loadWords } = require('./db/words');
 
 const PORT = 5080;
 async function startServer() {
@@ -9,14 +9,14 @@ async function startServer() {
     await connectDB();
 
    /* const testScore = new Highscore({
-        name: 'TestPlayer',
-        guesses: 3,
-        time: 45,
+        name: 'TestPlayer2',
+        guesses: 4,
+        time: 42,
         wordLength: 5,
         duplicatesAllowed: false,
   });
   await testScore.save();
-  console.log('Test score saved:', testScore); */
+  console.log('Test score saved:', testScore);  */
 
     app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
