@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "npm run build --prefix wordle && node server.js"
   },
   "repository": {
     "type": "git",

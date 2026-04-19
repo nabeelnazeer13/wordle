@@ -3,14 +3,16 @@ const { pick_word } = require('./logic/word_picker');
 const Highscore = require('./db/highscore');
 const aboutRoute = require('./routes/about');
 const highscoresRoute = require('./routes/highscores');
+const path = require('path');
 
 const app = express();
 app.use(express.json());
 app.use(aboutRoute);
 app.use(highscoresRoute);
+app.use(express.static(path.join(__dirname, 'wordle', 'dist')));
 
 app.get('/', (req, res) => {
-  res.send('Server up and running');
+  res.sendFile(path.join(__dirname, 'wordle', 'dist', 'index.html'));
 });
 
 app.get('/api/word', (req, res) => {
