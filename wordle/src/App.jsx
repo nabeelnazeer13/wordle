@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Wordle_Logo from './assets/wordle_logo.png'
 import './App.css'
-import GameSettings from './components/gameSettings';
+import GameSettings from './components/GameSettings';
 import InputFeedback from './components/InputFeedback';
 import GameBoard from './components/GameBoard';
 import GameScore from './components/GameScore';
